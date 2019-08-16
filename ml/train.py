@@ -1,10 +1,11 @@
+import keras
 import os
+import matplotlib
+import pickle
+
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 from matplotlib import pyplot as plt
-
-import keras
-
 from keras.applications.resnet50 import ResNet50, preprocess_input
 from keras.preprocessing.image import ImageDataGenerator
 from keras.layers import Dense, Activation, Flatten, Dropout
@@ -19,7 +20,7 @@ base_model = ResNet50(weights='imagenet',
                       include_top=False, 
                       input_shape=(HEIGHT, WIDTH, 3))
 
-TRAIN_DIR = "/Users/alexisokamura/Desktop/fred_dataset"
+TRAIN_DIR = "/Users/alexisokamura/Desktop/fredetector_data/fred_dataset"
 HEIGHT = 150
 WIDTH = 150
 BATCH_SIZE = 3
@@ -98,3 +99,8 @@ def plot_training(history):
     plt.savefig('acc_vs_epochs.png')
 
 plot_training(history)
+
+model_object = { "model": finetune_model }
+
+with open("/Users/alexisokamura/Desktop/fredetector_data/model/model.pkl", 'wb') as handle:
+    pickle.dump(model_object, handle, protocol=pickle.HIGHEST_PROTOCOL)
