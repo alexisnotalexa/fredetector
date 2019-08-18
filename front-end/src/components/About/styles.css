@@ -1,0 +1,9 @@
+.about--container {
+  display: flex;
+  justify-content: center;
+}
+
+.about--text {
+  width: 50%;
+  color: dimgray;
+}
