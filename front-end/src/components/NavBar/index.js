@@ -1,17 +1,37 @@
 import React, { Component } from 'react';
 import './styles.css';
 
-class NavBar extends Component {
-  onLinkClick = () => this.props.history.push('/about');
+export default class NavBar extends Component {
+  onLinkClick = link => this.props.history.push(link);
+
+  renderAbout = () => {
+    return (
+      <span 
+        className={'navbar--link about'} 
+        onClick={() => this.onLinkClick('/about')}
+      >
+        / About
+      </span>
+    );
+  };
+
+  renderLogo = () => {
+    return (
+      <h1 
+        className={'navbar--link'} 
+        onClick={() => this.onLinkClick('/')}
+      >
+        FREDETECTOR
+      </h1>
+    );
+  };
 
   render() {
     return (
       <div className={'navbar--container'}>
-        <h1 className={'navbar--link'}>FREDETECTOR</h1>
-        <span className={'navbar--link about'} onClick={this.onLinkClick}>/ About</span>
+        {this.renderLogo()}
+        {this.renderAbout()}
       </div>
     );
   }
 }
-
-export default NavBar;
