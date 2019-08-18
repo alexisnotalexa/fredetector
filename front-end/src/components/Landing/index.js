@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Landing = () => {
-  return (
-    <div>
-      <h1>Landing</h1>
-    </div>
-  );
-};
+import Fred from './Fred';
+import Fredetector from './Fredetector';
 
-export default Landing;
+export default class Landing extends Component {
+  render() {
+    return (
+      <div className={'landing--container'}>
+        {/* <Fred /> */}
+        <Fredetector />
+      </div>
+    );
+  }
+}
