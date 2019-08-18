@@ -75,11 +75,11 @@
 
 .button--upload {
   background: royalblue;
-  border-bottom: 5px solid #2750ca;
+  /* border-bottom: 5px solid #2750ca; */
 }
 
 .button--upload:active {
-  border-bottom: 1px solid #2750ca;
+  /* border-bottom: 1px solid #2750ca; */
 	transform: translateY(2px);
 }
 
@@ -89,11 +89,11 @@
 
 .button--restart {
   background: palevioletred;
-  border-bottom: 5px solid #ce5e82;
+  /* border-bottom: 5px solid #ce5e82; */
 }
 
 .button--restart:active {
-  border-bottom: 1px solid #ce5e82;
+  /* border-bottom: 1px solid #ce5e82; */
 	transform: translateY(2px);
 }
 

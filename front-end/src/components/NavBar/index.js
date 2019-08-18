@@ -23,13 +23,12 @@ export default class NavBar extends Component {
         className={'navbar--link'} 
         onClick={() => this.onLinkClick('/')}
       >
-        FREDETECTOR
+        FREDETECTOR 😼🔎
       </h1>
     );
   };
 
   render() {
-    console.log(this.props);
     return (
       <div className={'navbar--container'}>
         {this.renderLogo()}
