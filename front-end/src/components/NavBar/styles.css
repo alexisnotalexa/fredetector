@@ -13,6 +13,34 @@
   margin-left: 1rem;
 }
 
-.about:hover {
-  color: lightgray;
+.active::after {
+  content: '';
+  display: block;
+  height: 8px;
+  width: 98%;
+  background: rgba(245, 220, 140, 0.5);
+  margin-top: -9px;
+  margin-left: 2px;
+  animation: grow 250ms forwards;
+}
+
+.inactive::after {
+  content: '';
+  display: block;
+  height: 8px;
+  width: 0%;
+  background: rgba(245, 220, 140, 0.5);
+  margin-top: -9px;
+  margin-left: 2px;
+  animation: shrink 250ms forwards;
+}
+
+@keyframes grow {
+  0% { width: 0%; }
+  100% { width: 98%; }
+}
+
+@keyframes shrink {
+  0% { width: 98%; }
+  100% { width: 0%; }
 }

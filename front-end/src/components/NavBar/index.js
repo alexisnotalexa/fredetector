@@ -5,9 +5,11 @@ export default class NavBar extends Component {
   onLinkClick = link => this.props.history.push(link);
 
   renderAbout = () => {
+    const { history } = this.props;
+    const isAboutPage = history.location.pathname === '/about';
     return (
       <span 
-        className={'navbar--link about'} 
+        className={`navbar--link about ${isAboutPage ? 'active' : 'inactive'}`} 
         onClick={() => this.onLinkClick('/about')}
       >
         / About
@@ -27,6 +29,7 @@ export default class NavBar extends Component {
   };
 
   render() {
+    console.log(this.props);
     return (
       <div className={'navbar--container'}>
         {this.renderLogo()}
