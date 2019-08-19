@@ -30,7 +30,7 @@
   animation: sparkle linear 1;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 4s;
+  animation-delay: 3s;
 }
 
 .fred--title {
@@ -66,6 +66,11 @@
   to { width: 200px; }
 }
 
+@keyframes typewriter2 {
+  from { width: 0; }
+  to { width: 385px; }
+}
+
 @keyframes blinkLine {
   from { border-right-color: rgba(0, 0, 0, 0.75); }
   to { border-right-color: transparent; }
@@ -76,11 +81,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+}
+
+.fredetector--content {
+  opacity: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+  animation-delay: 3s;
 }
 
 .fredetector--title {
   font-size: 2rem;
+  animation: typewriter2 3.5s steps(30) 250ms 1 normal both,
+  blinkLine 500ms steps(30) infinite normal;
 }
 
 .fredetector--desc {

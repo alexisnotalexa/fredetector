@@ -4,7 +4,7 @@ import './styles.css';
 const Footer = () => {
   return (
     <div className={'footer--container'}>
-      <span>Alexis Okamura &copy; 2019</span>
+      <span className={'footer--text'}>Alexis Okamura &copy; 2019</span>
     </div>
   );
 };

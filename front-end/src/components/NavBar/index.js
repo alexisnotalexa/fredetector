@@ -23,7 +23,7 @@ export default class NavBar extends Component {
         className={'navbar--link'} 
         onClick={() => this.onLinkClick('/')}
       >
-        FREDETECTOR 😼🔎
+        FREDETECTOR <span role="img" arial-label="magnifying-glass">🔎</span>
       </h1>
     );
   };

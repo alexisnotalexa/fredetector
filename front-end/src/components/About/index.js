@@ -4,6 +4,7 @@ import './styles.css';
 const About = () => {
   return (
     <div className={'about--container'}>
+      <h2>What is Fredetector?</h2>
       <p className={'about--text'}>
       Lorem ipsum dolor amet pork belly drinking vinegar typewriter lumbersexual air plant vegan next level pop-up ethical blog gluten-free scenester. Craft beer palo santo iceland twee asymmetrical mustache normcore. 90's banh mi mustache scenester, keytar beard tbh. Vexillologist shoreditch everyday carry taiyaki chia. Yuccie venmo irony, lomo iPhone humblebrag tacos plaid vice unicorn letterpress whatever. Lumbersexual 90's vape selvage occupy.
       <br /><br />
