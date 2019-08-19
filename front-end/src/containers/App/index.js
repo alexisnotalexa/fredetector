@@ -3,6 +3,7 @@ import { Switch, Route, withRouter } from 'react-router-dom';
 import './App.css';
 
 import About from '../../components/About';
+import Footer from '../../components/Footer';
 import Landing from '../../components/Landing';
 import NavBar from '../../components/NavBar';
 
@@ -15,6 +16,7 @@ class App extends Component {
           <Route exact path="/" component={Landing} />
           <Route path="/about" component={About} />
         </Switch>
+        <Footer />
       </div>
     );
   }

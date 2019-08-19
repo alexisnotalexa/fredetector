@@ -1,6 +1,7 @@
 .landing--container {
   display: flex;
   justify-content: center;
+  flex: 1;
 }
 
 .fred--container {
@@ -15,8 +16,8 @@
 }
 
 .fred--title {
-  width: 200px;
-  font-size: 4rem;
+  width: 250px;
+  font-size: 5rem;
 }
 
 .fredetector--container {
