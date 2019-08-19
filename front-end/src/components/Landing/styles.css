@@ -118,6 +118,7 @@
   align-items: center;
   color: dimgray;
   margin: 1rem 0;
+  position: relative;
 }
 
 .fredetector--controls {
@@ -170,4 +171,15 @@
 
 .button--restart:hover:enabled {
   background: #f17aa1;
+}
+
+.file-uploader--overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: ghostwhite;
+  color: dimgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
