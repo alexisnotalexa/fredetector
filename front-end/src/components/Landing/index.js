@@ -8,13 +8,14 @@ export default class Landing extends Component {
     showDetector: false
   };
 
-  onClick = () => this.setState({ showDetector: !this.state.showDetector });
+  onClick = () => this.setState({ showDetector: true });
+
   render() {
     return (
-      <div className={'landing--container'} onClick={this.onClick}>
+      <div className={'landing--container'}>
         {this.state.showDetector
           ? <Fredetector />
-          : <Fred />}
+          : <Fred onClick={this.onClick} />}
       </div>
     );
   }
