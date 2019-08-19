@@ -7,12 +7,15 @@ export default class Fred extends Component {
   render() {
     return (
       <div className={'fred--container'}>
-        <h3 className={'fred--title'}>This is Fred...</h3>
-        <img 
-          alt={'fred'} 
-          className={'fred--img'} 
-          src={image} 
-        />
+        <h3 className={'fred--title line'}>This is Fred...</h3>
+        <div style={{ position: 'relative' }}>
+          <img 
+            alt={'fred'} 
+            className={'fred--img'} 
+            src={image} 
+          />
+          <span className={'sparkles'} role="img" aria-label="sparkles">✨</span>
+        </div>
       </div>
     );
   }
